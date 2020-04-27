@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Chat con Node en Heroku</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8"/>
+        <style>
+            *{padding:0; margin:0;box-sizing:border-box}
+           html,body{height:100%;}
+           #centrar{height:100%;display: flex;justify-content: center; align-items: center;}
+            #contenedor{height:80%;width:40%;padding:0.5%;border:1px solid black;float:left}
+            #users{height:80%;width:20%;padding:0.5%;border:1px solid black;float:left}
+            #chat{width:100%;height:90%;border:1px solid black;}
+            #message-box,#login{height:10%;border:1px solid black;}
+            #chat-message,#chat-message1{width:85%;padding:1%;}
+            #btnEnviar,#btnEnviar1{width:10%;padding:1%;margin-left:2.5%}
+            .oculta{display:none}
+            .visible{display:flex;justify-content: center; align-items: center;}
+            .visible2{display:block;}
+            .saludo{padding:1%;}
+            #usernames h2{text-align:center;border-bottom:1px solid black}
+            .error{color:red;}
+            .privado{color:gray;font-style:italic}
+        </style>
+    </head>
+    <body>
+        <div id="centrar">
+            <div id="contenedor">
+                <div id="chat">
+                </div>
+                <form id="message-box" class="oculta">
+                    <p class="saludo" id="nick"></p>
+                    <p class="visible"><input type="text" id="chat-message"/>
+                    <input type="submit" value=">>" id="btnEnviar"/></p>
+                </form>
+                <form id="login" class="visible2">
+                    <p id="error">&nbsp;</p>
+                    <p class="visible"><input type="text" id="chat-message1" placeholder="Introduzca su nombre" required/>
+                    <input type="submit" value=">>" id="btnEnviar1"/></p>
+                </form>
+                
+            </div>
+            <div id="users" class='oculta'>
+                <div id="usernames">
+
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+        <script src="js/main.js" charset="utf-8"></script>
+    </body>
+</html>
