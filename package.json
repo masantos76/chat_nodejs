@@ -1,0 +1,23 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "Chat desplegado en Heroku",
+  "main": "src/chat.js",
+  "scripts": {
+    "watch": "nodemon",
+    "start": "node src/chat.js"
+  },
+  "keywords": [],
+  "author": "Santitos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.7",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
