@@ -59,7 +59,7 @@ $(function(){
 
     socket.on('usernames', function(data){
         
-        let html='<h2>Usuarios Conectados</h2><br/>';
+        let html='<h2>Usuarios</h2><br/>';
         for(let i=0;i<data.length;i++)
         {
             html+='<p><strong>'+data[i]+'</strong></p><br/>';
