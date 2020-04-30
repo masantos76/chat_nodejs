@@ -13,7 +13,7 @@ const sequelize = new Sequelize('bd_chat','jose','josefa',{
 })
 */
 
-const sequelize = new Sequelize('eroku_3bb7e9ccf44c3d4','b0c3979ceddf2f','ab35583b',{
+const sequelize = new Sequelize('heroku_3bb7e9ccf44c3d4','b0c3979ceddf2f','ab35583b',{
   host:'eu-cdbr-west-02.cleardb.net',
   dialect:'mysql',// one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' 
   //pool:{ max:5, min:0, idle:10000}
@@ -25,7 +25,6 @@ sequelize.authenticate()
   .catch(err => {
     console.log('No se ha podido conectar a la BD')
   })
-
 
 
 
