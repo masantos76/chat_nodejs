@@ -11,16 +11,18 @@
             #contenedor{height:100%;width:70%;padding:0.5%;border:1px solid black;float:left}
             #users{height:100%;width:30%;padding:0.5%;border:1px solid black;float:left;overflow:auto}
             #chat{width:100%;height:80%;border:1px solid black;overflow:auto}
+            #chat p{padding:0.25em;}
             #message-box,#login{height:20%;border:1px solid black;overflow:auto}
-            #chat-message,#chat-message1{width:85%;padding:0.5%;}
-            #btnEnviar,#btnEnviar1{width:10%;padding:0.5%;margin-left:2.5%}
+            #chat-message,#chat-message1{width:85%;padding:0.5%;display:inline-block;margin-left:1.5%;}
+            #btnEnviar,#btnEnviar1{width:10%;padding:0.5%;margin-left:1.5%;}
             .oculta{display:none}
-            .visible{display:flex;justify-content: center; align-items: center;}
+            .visible{display:flex;justify-content: center; align-items: center;flex-direction: column;height:100%;}
             .visible2{display:block;}
             .saludo{padding:1%;}
             #usernames h2{text-align:center;border-bottom:1px solid black;}
             .error{color:red;}
             .privado{color:gray;font-style:italic}
+            form p{width:100%}
         </style>
     </head>
     <body>
@@ -29,14 +31,18 @@
                 <div id="chat">
                 </div>
                 <form id="message-box" class="oculta">
+                   <div class="visible">
                     <p class="saludo" id="nick"></p>
-                    <p class="visible"><input type="text" id="chat-message"/>
+                    <p class="visible2"><input type="text" id="chat-message"/>
                     <input type="submit" value=">>" id="btnEnviar"/></p>
+                    </div>
                 </form>
                 <form id="login" class="visible2">
+                    <div class="visible">
                     <p id="error">&nbsp;</p>
-                    <p class="visible"><input type="text" id="chat-message1" placeholder="Introduzca su nombre" required/>
+                    <p class="visible2"><input type="text" id="chat-message1" placeholder="Introduzca su nombre" required/>
                     <input type="submit" value=">>" id="btnEnviar1"/></p>
+                    </div>
                 </form>
                 
             </div>
