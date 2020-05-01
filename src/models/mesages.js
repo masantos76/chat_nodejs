@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 module.exports=function(sequelize,DataTypes){
-    return sequelize.define('chat',
+    return sequelize.define('chat_mod',
         {
         id:{
             type:Sequelize.INTEGER,

@@ -10,7 +10,7 @@ module.exports = function(io,sequelize){
         console.log('Nuevo Cliente conectado');
         
         //let messages = await tabla_chat.findAll({ attributes: ['nombre', 'mensaje'], offset:3, limit:4 })
-        let messages = await tabla_chat.findAll({ attributes: ['nombre', 'mensaje'],  limit:10 })
+        let messages = await tabla_chat.findAll({ attributes: [ 'nombre', 'mensaje'], order:[['id', 'DESC']], limit:10 })
         
 
         socket.on('new user', (data,cb)=>{
